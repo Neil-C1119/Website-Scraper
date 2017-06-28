@@ -1,0 +1,17 @@
+{
+  "name": "content-scraper",
+  "version": "0.0.1",
+  "description": "Content scraper",
+  "main": "app.js",
+  "author": "ncurtis",
+  "scripts": {
+    "start": "node scraper.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "fast-csv": "^2.4.0",
+    "json2csv": "^3.7.3",
+    "x-ray": "^2.3.2"
+  }
+}
