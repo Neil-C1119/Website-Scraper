@@ -33,7 +33,7 @@ fs.mkdir("./data", error => {
             }
             else {
                 let errorDate = date.toString();
-                let errorData = "[" + errorDate + "] " + " Error code - " + error.statusCode + " | " + error.stack + "\r\n \r\n";
+                let errorData = "[" + errorDate + "] " + " Error - " + error.message + " | " + error.stack + "\r\n \r\n";
                 fs.appendFile("./scraper-error.log", errorData, () => {
                     console.log("There was an error! Please check the log for error details.");
                 });

@@ -10,7 +10,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "fast-csv": "^2.4.0",
     "json2csv": "^3.7.3",
     "x-ray": "^2.3.2"
   }
