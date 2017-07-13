@@ -9,7 +9,8 @@ var currentHour = date.getHours();
 var currentMinute = date.getMinutes();
 var currentSecond = date.getSeconds();
 var currentTime = currentHour + ":" + currentMinute + ":" + currentSecond;
-var fileDate = date.toString().slice(0, 10);
+var fileDate = date.toString().slice(4, 15);
+console.log(date.toString());
 
 fs.mkdir("./data", error => {
     x(site, "li",
