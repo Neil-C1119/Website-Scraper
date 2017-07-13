@@ -9,7 +9,6 @@ var currentHour = date.getHours();
 var currentMinute = date.getMinutes();
 var currentSecond = date.getSeconds();
 var currentTime = currentHour + ":" + currentMinute + ":" + currentSecond;
-var fileDate = date.toString().slice(4, 15);
 console.log(date.toString());
 
 fs.mkdir("./data", error => {
@@ -26,7 +25,7 @@ fs.mkdir("./data", error => {
                     shirts[i].time = currentTime;
                 }
                 var jsoncsv = csv({ data: shirts, fields: fields });
-                let csvFile = "./data/" + fileDate + ".csv";
+                let csvFile = "./data/" + date.toISOString().slice(0, 10) + ".csv";
                 fs.writeFile(csvFile, jsoncsv, function (err) {
                     if (err) throw err;
                     console.log("Data folder has been created, and the data has been stored.");
